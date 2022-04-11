@@ -2,8 +2,8 @@ from full_inf.full_inf import Full_inf
 from find_opt.find_opt import Htop_proc
 
 class Info_viev:
-    inf_atr= Full_inf()
-    htopproc_atr=Htop_proc()
+    inf_atr = Full_inf()
+    htopproc_atr = Htop_proc()
 
 
     def info_viev(self):
