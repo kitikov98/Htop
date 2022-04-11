@@ -1,11 +1,7 @@
 from disk_inf.disk_inf import Disk_inf
-from load_cpu.load_cpu import Load_cpu
-from load_proc.load_proc import Load_proc
-from netmb_inf.netmb_inf import Netmb_inf
-from netpack_inf.netpack_inf import Netpack_inf
-from run_pid.run_pid import Run_pid
-from swp_mem.swp_mem import Swp_mem
-from virt_mem.virt_mem import Virt_mem
+from load_cpu.load_cpu import Load_cpu, Load_proc
+from netmb_inf.netmb_inf import Netmb_inf, Netpack_inf
+from virt_mem.virt_mem import Virt_mem, Swp_mem
 
 class Full_inf:
     full_atr = Disk_inf()
