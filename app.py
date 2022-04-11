@@ -1,7 +1,7 @@
-from info_viev.info_viev import Info_viev
+from info_viev.info_viev import InfoViev
 
 
 
 if __name__ == '__main__':
-    htop= Info_viev()
+    htop= InfoViev()
     htop.info_viev()

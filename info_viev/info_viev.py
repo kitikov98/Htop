@@ -1,9 +1,9 @@
-from full_inf.full_inf import Full_inf
-from find_opt.find_opt import Htop_proc
+from full_inf.full_inf import FullInf
+from find_opt.find_opt import HtopProc
 
-class Info_viev:
+class InfoViev:
     inf_atr = Full_inf()
-    htopproc_atr = Htop_proc()
+    htopproc_atr = HtopProc()
 
 
     def info_viev(self):
@@ -19,5 +19,5 @@ class Info_viev:
         self.htopproc_atr.htop_proc()
 
 if __name__ == '__main__':
-    c= Info_viev()
+    c= InfoViev()
     c.info_viev()

@@ -1,14 +1,14 @@
-from find_opt.find_opt import Disk_inf, Load_cpu, Load_proc, Netmb_inf, Netpack_inf, Virt_mem, Swp_mem
+from find_opt.find_opt import DiskInf, LoadCpu, LoadProc, NetmbInf, NetpackInf, VirtMem, SwpMem
 
 
-class Full_inf:
-    full_atr = Disk_inf()
-    loadcpu_atr = Load_cpu()
-    loadproc_atr = Load_proc()
-    netmb_atr = Netmb_inf()
-    netpack_atr = Netpack_inf()
-    swpmem_atr = Swp_mem()
-    virtmem_atr = Virt_mem()
+class FullInf:
+    full_atr = DiskInf()
+    loadcpu_atr = LoadCpu()
+    loadproc_atr = LoadProc()
+    netmb_atr = NetmbInf()
+    netpack_atr = NetpackInf()
+    swpmem_atr = SwpMem()
+    virtmem_atr = VirtMem()
 
     def full_info(self):
         title_s={self.full_atr.disk_inf()[0]:self.full_atr.disk_inf()[1:],
@@ -33,6 +33,6 @@ class Full_inf:
         print(title_s)
 
 if __name__ == '__main__':
-    b = Full_inf()
+    b = FullInf()
     print(b.full_info())
     b.showfull_info()

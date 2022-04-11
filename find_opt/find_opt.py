@@ -1,6 +1,6 @@
 import psutil
 
-class Disk_inf:
+class DiskInf:
 
     def disk_inf(self):
         self.disk_u = psutil.disk_usage('/')
@@ -20,7 +20,7 @@ class Disk_inf:
         self.disk_f = round(self.disk_f.free / (1024 ** 2), 2)
         print(f"{'Disk total/used/free':<21}|{self.disk_t:^10.2f}/{self.disk_u:^10.2f}/{self.disk_f:^8.2f} MB")
 
-class Load_cpu:
+class LoadCpu:
 
     def load_cpu(self):
         return ('Load CPU (%)', psutil.cpu_percent(interval=1))
@@ -28,7 +28,7 @@ class Load_cpu:
     def showload_cpu(self):
         print(f"{'Load CPU':<21}|{psutil.cpu_percent(interval=1):^6}%")
 
-class Load_proc:
+class LoadProc:
 
     def load_proc(self):
         self.load_pr = psutil.getloadavg()
@@ -38,7 +38,7 @@ class Load_proc:
         self.load_pr=psutil.getloadavg()
         print(f"{'Load average':<21}|{self.load_pr[0]:^6}{self.load_pr[1]:^6}{self.load_pr[2]:^6}")
 
-class Virt_mem:
+class VirtMem:
 
     def virt_mem(self):
         self.virt_memt = psutil.virtual_memory()
@@ -54,7 +54,7 @@ class Virt_mem:
         self.virt_memu = round(self.virt_memu.used / (1024 ** 2), 2)
         print(f"{'Memory':<21}|{self.virt_memu:^9.2f}/{self.virt_memt:^9.2f} MB")
 
-class Swp_mem:
+class SwpMem:
 
     def swp_mem(self):
         self.sw_memt = psutil.swap_memory()
@@ -70,7 +70,7 @@ class Swp_mem:
         self.sw_memu = round(self.sw_memu.used / (1024 ** 2), 2)
         print(f"{'SWP Memory':<21}|{self.sw_memu:^6.2f} / {self.sw_memt:.2f} MB")
 
-class Netmb_inf:
+class NetmbInf:
 
     def netmb_inf(self):
         self.bytes_s = psutil.net_io_counters()
@@ -86,7 +86,7 @@ class Netmb_inf:
         self.bytes_r = self.bytes_r.bytes_recv / (1024 ** 2)
         print(f"{'MB sent/rec':<21}|{self.bytes_s:^6.2f}/{self.bytes_r:.2f} MB")
 
-class Netpack_inf:
+class NetpackInf:
 
     def netpack_inf(self):
         self.pack_s = psutil.net_io_counters()
@@ -95,7 +95,7 @@ class Netpack_inf:
         self.pack_r = self.pack_r.packets_recv
         return ('Packets sent/rec', self.pack_s, self.pack_r)
 
-class Htop_proc:
+class HtopProc:
 
     def htop_proc(self):
         print(f"{'pid':16}{'username':^16}{'memory_percent':^16}{'cpu_percent':^16}{'cmdline'}")
