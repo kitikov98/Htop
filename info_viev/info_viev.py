@@ -1,5 +1,5 @@
 from full_inf.full_inf import Full_inf
-from htop_proc.htop_proc import Htop_proc
+from find_opt.find_opt import Htop_proc
 
 class Info_viev:
     inf_atr= Full_inf()
