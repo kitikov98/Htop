@@ -27,6 +27,8 @@ class Cpu:
         for index in range(len(self.info["percent"])):
             self.template += "{percent[" + str(index) + "]} "
 
+        print("_" * 50)
+
     def show(self):
         print(self.template.format(**self.info))
 
