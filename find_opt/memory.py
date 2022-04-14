@@ -1,6 +1,7 @@
 import psutil
+from find_opt.parent import Parent
 
-class MemInfo:
+class MemInfo(Parent):
     info = {}
     template =""
 
@@ -37,8 +38,6 @@ class MemInfo:
 
         print("_" * 50)
 
-    def show(self):
-        print(self.template.format(**self.info))
 
 
 if __name__ == "__main__":

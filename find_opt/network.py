@@ -1,7 +1,7 @@
 import psutil
+from find_opt.parent import Parent
 
-
-class NetworkInf:
+class NetworkInf(Parent):
     info = {}
     template =""
 
@@ -14,7 +14,6 @@ class NetworkInf:
         self.info.update(bytes_s=str(self.bytes_s))
         self.bytes_r = round(self.bytes.bytes_recv / (1024 ** 2),2)
         self.info.update(bytes_r=str(self.bytes_r))
-
 
 
     def prepare(self):
@@ -35,9 +34,6 @@ class NetworkInf:
             self.template += "{network[" + str(index) + "]} "
 
         print("_" * 50)
-
-    def show(self):
-        print(self.template.format(**self.info))
 
 
 if __name__ == "__main__":

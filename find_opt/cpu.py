@@ -1,6 +1,7 @@
 import psutil
+from find_opt.parent import Parent
 
-class Cpu:
+class Cpu(Parent):
     info = {}
     template =""
 
@@ -29,8 +30,6 @@ class Cpu:
 
         print("_" * 50)
 
-    def show(self):
-        print(self.template.format(**self.info))
 
 
 if __name__ == "__main__":

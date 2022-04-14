@@ -1,6 +1,7 @@
 import psutil
+from find_opt.parent import Parent
 
-class DiskInf:
+class DiskInf(Parent):
     info = {}
     template =""
 
@@ -30,9 +31,6 @@ class DiskInf:
         for index in range(len(self.info["diskf"])):
             self.template += "{diskf[" + str(index) + "]}"
         print("_" * 50)
-
-    def show(self):
-        print(self.template.format(**self.info))
 
 
 if __name__ == "__main__":
